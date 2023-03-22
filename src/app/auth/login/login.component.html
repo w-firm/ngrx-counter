@@ -6,11 +6,9 @@
       <div class="mb-3">
         <label>Email</label>
         <input type="text" class="form-control" formControlName="email" />
-        <div
-          *ngIf="
+        <div *ngIf="
             loginForm.get('email').touched && !loginForm.get('email').valid
-          "
-        >
+          ">
           <div *ngIf="loginForm.get('email').errors.required">
             Email is required
           </div>
@@ -19,27 +17,17 @@
       </div>
       <div class="mb-3">
         <label>Password</label>
-        <input
-          type="password"
-          class="form-control"
-          formControlName="password"
-        />
-        <div
-          *ngIf="
+        <input type="password" class="form-control" formControlName="password" />
+        <div *ngIf="
             loginForm.get('password').touched &&
             !loginForm.get('password').valid
-          "
-        >
+          ">
           <div>Password is required</div>
         </div>
       </div>
 
       <div class="mb-3">
-        <button
-          type="submit"
-          class="btn btn-primary"
-          [disabled]="!loginForm.valid"
-        >
+        <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">
           Login
         </button>
       </div>
